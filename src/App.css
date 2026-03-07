@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  @apply text-lg font-bold
+}
+
+p {
+  @apply text-sm font-semibold
+}
+
+.text-input {
+  @apply text-lg rounded p-1 bg-slate-100 hover:bg-slate-50 transition;
+  color: slategray;
+  font-size: smaller;
+}
+
+.tag {
+  @apply p-2 bg-slate-600 text-white text-sm rounded;
+}
+
+button {
+  @apply px-4 py-2 bg-slate-800 text-white rounded hover:bg-slate-600 transition;
+}
+
+button.warning {
+  @apply hover:bg-red-950;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
