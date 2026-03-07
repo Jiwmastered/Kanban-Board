@@ -5,7 +5,7 @@ import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 
 export interface CardProps {
-    id : string,
+    uid : string,
     title : string,
     desc : string,
     tag : string[],
@@ -14,7 +14,7 @@ export interface CardProps {
     onAddTag : () => void,
 }
 
-export default function Card({id, title, desc, tag, onEdit, onDelete, onAddTag } : CardProps) {
+export default function Card({uid, title, desc, tag, onEdit, onDelete, onAddTag } : CardProps) {
     const [titleInput, setTitleInput] = useState(title);
     const [descInput, setDescInput] = useState(desc);
     
@@ -32,7 +32,8 @@ export default function Card({id, title, desc, tag, onEdit, onDelete, onAddTag }
         <div className='border rounded 
         flex flex-col w-full 
         bg-blue-100 p-2 gap-1
-        text-black'
+        text-black
+        hover:p-4 transition-all'
         >
             <input type="text" value={titleInput} onChange={handleTitleChange}  className='w-full text-left'/>
             <textarea value={descInput} onChange={handleDescChange} className='w-full text-left' />
