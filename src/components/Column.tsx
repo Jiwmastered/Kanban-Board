@@ -8,7 +8,7 @@ export interface ColumnProps {
     uid : string,
     name : string,
     items : CardProps[]
-    color : string
+    color? : string
 }
 
 export default function Column(props : ColumnProps) {
